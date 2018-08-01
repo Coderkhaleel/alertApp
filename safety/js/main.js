@@ -81,10 +81,20 @@ function initMap(pos) {
         }
          map = new google.maps.Map(document.getElementById('dvMap'),
                                       mapOptions);
+		var myicon = "images/bluecircle.png"
         var userMarker = new google.maps.Marker({
             position: myLatLng,
-            map: map
+            map: map,
+			icon:myicon
         });
+var image =  {
+    url: 'images/fire.png', 
+scaledSize: new google.maps.Size(40, 40)};
+  var beachMarker = new google.maps.Marker({
+    position: {lat: 12.914041, lng: 80.218897},
+    map: map,
+    icon: image
+  });
   var triangleCoords = [
     {lat: 25.774, lng: -80.19},
     {lat: 18.466, lng: -66.118},
